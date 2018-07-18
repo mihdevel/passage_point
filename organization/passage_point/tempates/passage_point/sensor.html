@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>Для регистрации прохода сотрудника на {% sensor_id %} - введите № карты</h1>
+    <form action="/sensor/{% sensor_id %}/check/" method="post">
+        <input type="text">
+        <input type="submit">
+    </form>
+</body>
+</html>
