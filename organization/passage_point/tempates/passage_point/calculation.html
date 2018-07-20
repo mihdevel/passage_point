@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Рассчет</title>
+</head>
+<body>
+
+    <h1>Для получения информации введите дату</h1>
+    <form action="{% url 'passage_point:check_pass_return' %}" method="post">
+        {% csrf_token %}
+        <p>
+            Дата начала
+            <input type="date" name="date_start">
+        </p>
+        <p>
+            Дата окончания
+            <input type="date" name="date_finish">
+        </p>
+        <input type="submit">
+    </form>
+
+</body>
+</html>

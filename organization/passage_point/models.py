@@ -15,3 +15,6 @@ class card_cross(models.Model):
   check_detetime = models.DateTimeField(default=timezone.now)
   card_id = models.ForeignKey('card', on_delete=models.CASCADE)
   sensor = models.CharField(max_length=6)
+  
+  def __str__(self):
+    return self.sensor
